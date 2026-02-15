@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Just for You 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", cursive;
+    background: linear-gradient(#ffe6f2, #fff0f6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: #d1002c;
+}
+
+/* Card */
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    max-width: 350px;
+}
+
+/* Input */
+input {
+    padding: 10px;
+    width: 80%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid #ff80bf;
+    text-align: center;
+    font-size: 16px;
+}
+
+/* Button */
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #e63956;
+}
+
+/* Error */
+.error {
+    color: #e63956;
+    margin-top: 10px;
+    display: none;
+}
+</style>
+</head>
+<body>
+
+<div class="card">
+    <h2>💌 Just for You</h2>
+    <p>When was our first date? 💖</p>
+
+    <input type="text" id="answer" placeholder="dd month yyyy">
+
+    <br>
+    <button onclick="checkAnswer()">Unlock 💗</button>
+
+    <div class="error" id="error">Hmm… try again, my love 🥺</div>
+</div>
+
+<script>
+function checkAnswer() {
+    const input = document.getElementById("answer").value.trim().toLowerCase();
+
+    const correctAnswers = [
+        "23 may 2023",
+        "23rd may 2023",
+        "23/05/2023",
+        "23-05-2023"
+    ];
+
+    if (correctAnswers.includes(input)) {
+        window.location.href = "main.html"; // your main page
+    } else {
+        document.getElementById("error").style.display = "block";
+    }
+}
+</script>
+
+</body>
+</html>

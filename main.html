@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Of The Cutest Babes Reshmiii 🎂</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", cursive;
+    background: #ffe6f2;
+    text-align: center;
+    color: #ff4da6;
+    overflow-x: hidden;
+}
+
+/* 🎏 Improved Ribbon */
+.flag-ribbon {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 0;
+    background: linear-gradient(90deg,#ffb3d9,#ffd6e8);
+}
+
+.flag {
+    width: 22px;
+    height: 26px;
+    background: #ff4d6d;
+    clip-path: polygon(0 0,100% 0,50% 100%);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+}
+.flag:nth-child(even){background:#ff80bf}
+
+/* 💖 Elegant Heart Borders */
+.border-left,.border-right{
+    position:fixed;
+    top:0; bottom:0;
+    width:70px;
+    background:linear-gradient(to bottom,#ffb3d9,#ffe6f2);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-around;
+    box-shadow: inset 0 0 12px rgba(255,77,109,0.3);
+}
+.border-left{left:0;}
+.border-right{right:0;}
+
+.border-left span,.border-right span{
+    font-size:28px;
+    animation:floatBorder 5s ease-in-out infinite;
+}
+
+@keyframes floatBorder{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+/* 🎈 Balloons */
+.balloon{
+    position:fixed;
+    bottom:-120px;
+    width:42px;height:52px;
+    border-radius:50%;
+    animation:floatBalloon 14s linear infinite;
+}
+.balloon::after{
+    content:"";
+    position:absolute;
+    width:2px;height:40px;
+    background:#999;
+    top:52px; left:50%;
+}
+@keyframes floatBalloon{
+    to{transform:translateY(-130vh);}
+}
+
+/* 💖 Floating Hearts */
+.heart{
+    position:fixed;
+    bottom:-20px;
+    font-size:20px;
+    opacity:0.5;
+    animation:floatUp 12s linear infinite;
+}
+@keyframes floatUp{
+    to{transform:translateY(-120vh);}
+}
+
+/* 📸 Flip Photo Cards */
+.polaroid-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:30px;
+    margin-top:30px;
+}
+
+.flip-card{
+    width:260px;
+    height:220px;
+    perspective:1000px;
+}
+
+.flip-inner{
+    width:100%;
+    height:100%;
+    position:relative;
+    transform-style:preserve-3d;
+    transition:transform 0.7s;
+}
+
+.flip-card:hover .flip-inner{
+    transform:rotateY(180deg);
+}
+.flip-card.active .flip-inner{
+    transform:rotateY(180deg);
+}
+
+.flip-front,.flip-back{
+    position:absolute;
+    width:100%;
+    height:100%;
+    backface-visibility:hidden;
+    border-radius:8px;
+    overflow:hidden;
+    box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.flip-front img{
+    width:100%;height:100%;object-fit:cover;
+}
+
+.flip-back{
+    background:white;
+    color:#ff4d6d;
+    transform:rotateY(180deg);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:15px;
+    font-style:italic;
+    text-align:center;
+}
+
+/* ❤️ Buttons */
+.heart-btn{
+    background:#ff4d6d;
+    color:white;
+    border:none;
+    padding:12px 18px;
+    margin:6px;
+    font-size:14px;
+    border-radius:20px;
+    opacity:0.5;
+}
+.heart-btn.enabled{opacity:1;cursor:pointer;}
+.heart-btn.enabled:hover{background:#e63956;}
+
+/* 🎁 Big Birthday Button */
+#openBtn{
+    margin-top:20px;
+    font-size:22px;
+    padding:20px 45px;
+    border-radius:45px;
+    background:linear-gradient(45deg,#ff4d6d,#ff80bf);
+    box-shadow:0 0 25px rgba(255,77,109,0.7);
+    animation:pulse 2s infinite;
+}
+@keyframes pulse{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.06);}
+    100%{transform:scale(1);}
+}
+
+/* Countdown */
+#countdown{
+    margin:20px 0;
+    background:white;
+    display:inline-block;
+    padding:14px 24px;
+    border-radius:20px;
+    font-size:18px;
+}
+
+/* ❤️ Love text */
+.love-text{
+    margin-top:30px;
+    font-size:42px;
+    font-weight:bold;
+    color:#d1002c;
+    font-family:"Brush Script MT",cursive;
+}
+.signature{
+    position:fixed;
+    bottom:10px;
+    right:15px;
+    font-size:12px;
+    color:#d1002c;
+}
+</style>
+</head>
+<body>
+
+<!-- Ribbon -->
+<div class="flag-ribbon">
+<div class="flag"></div><div class="flag"></div><div class="flag"></div>
+<div class="flag"></div><div class="flag"></div><div class="flag"></div>
+<div class="flag"></div><div class="flag"></div><div class="flag"></div>
+</div>
+
+<!-- Side Borders -->
+<div class="border-left"><span>💖</span><span>💗</span><span>💖</span></div>
+<div class="border-right"><span>💗</span><span>💖</span><span>💗</span></div>
+
+<!-- Balloons -->
+<div class="balloon" style="left:15%; background:#ff99cc;"></div>
+<div class="balloon" style="left:75%; background:#ff66b2; animation-delay:3s;"></div>
+
+<h1>🎉 Birthday Of The Cutest Babes Reshmiii 🎉</h1>
+<div id="countdown">Loading...</div>
+
+<!-- 📸 Flip Photos -->
+<div class="polaroid-container">
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="pic1.jpg"></div>
+<div class="flip-back">“Gandhi ji yaha maidan krte thee XD” 💖</div>
+</div></div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="pic2.jpg"></div>
+<div class="flip-back">“Aap dekh sakte hae ye ladka mere sath gandi harkatein kr rha” 🌸</div>
+</div></div>
+
+<div class="flip-card">
+<div class="flip-inner">
+<div class="flip-front"><img src="pic3.jpg"></div>
+<div class="flip-back">“tumhe kisses de de kr kha jaungi puraa cutieee” ❤️</div>
+</div></div>
+
+</div>
+
+<!-- Day Buttons -->
+<div>
+<button class="heart-btn" id="day5">❤️ 5 Days to go</button>
+<button class="heart-btn" id="day4">❤️ 4 Days to go</button>
+<button class="heart-btn" id="day3">❤️ 3 Days to go</button>
+<button class="heart-btn" id="day2">❤️ 2 Days to go</button>
+<button class="heart-btn" id="day1">❤️ 1 Day to go</button>
+</div>
+
+<!-- Big Birthday Button -->
+<button class="heart-btn" id="openBtn">💌 Birthday Surprise</button>
+
+<!-- Love text -->
+<div class="love-text">I Love You So So Much Reshmi</div>
+<div class="signature">-by your lover Shaurya &lt;3</div>
+
+<script>
+const birthday=new Date("Feb 22, 2026 00:00:00").getTime();
+const btn=openBtn;
+const dayBtns={5:day5,4:day4,3:day3,2:day2,1:day1};
+
+setInterval(()=>{
+const now=new Date().getTime();
+const diff=birthday-now;
+
+const days=Math.floor(diff/(1000*60*60*24));
+const hours=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+const minutes=Math.floor((diff%(1000*60*60))/(1000*60));
+const seconds=Math.floor((diff%(1000*60))/1000);
+
+countdown.innerHTML=`${days} days ${hours}h ${minutes}m ${seconds}s to go 💖`;
+
+Object.keys(dayBtns).forEach(d=>{
+if(days<=d){
+dayBtns[d].classList.add("enabled");
+dayBtns[d].onclick=()=>location.href=`day${d}.html`;
+}
+});
+
+if(diff<=0){
+btn.classList.add("enabled");
+btn.onclick=()=>location.href="birthday-message.html";
+}
+},1000);
+
+/* Floating hearts */
+setInterval(()=>{
+const h=document.createElement("div");
+h.className="heart";
+h.innerHTML="💖";
+h.style.left=Math.random()*100+"vw";
+document.body.appendChild(h);
+setTimeout(()=>h.remove(),12000);
+},900);
+
+/* Tap to flip on phone */
+document.querySelectorAll(".flip-card").forEach(card=>{
+card.addEventListener("click",()=>card.classList.toggle("active"));
+});
+</script>
+</body>
+</html>
